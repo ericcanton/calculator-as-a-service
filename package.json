@@ -1,0 +1,14 @@
+{
+  "name": "calculator-as-a-service",
+  "version": "1.0.0",
+  "description": "RESTful four-function calculator. Provides Add, Subtract, Multiply, Modulo endpoints.",
+  "main": "calc-server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node calc-server.js"
+  },
+  "author": "ericcanton",
+  "license": "MIT"
+}
