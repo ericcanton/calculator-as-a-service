@@ -9,7 +9,7 @@ The format for the API is `/operation?A&B` to perform `operation` with floats `A
 
   `http://localhost:1200/modulo?1278&43`
   
-returns the JSON `{"answer": 31}`, since 1278 = 31 mod 43. (Or in C notation, `1278 % 43 == 31`.)  
+returns the JSON `{"operation": "1288 % 43", "answer": 31}`, since 1278 = 31 mod 43. (Or in C notation, `1278 % 43 == 31`.)  
 
 The current endpoints are `/add`, `/sub`, `/mult`, and `/modulo`. Anything else returns an error and help message, wrapped as JSON. 
 
