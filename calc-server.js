@@ -25,16 +25,16 @@ http.createServer( (req, res) => {
         case '/add':
             // Parse these to floats, otherwise + in ops.add interpreted as concatenation
             operads = [parseFloat(operads[0]), parseFloat(operads[1])];
-            res.write(`{"answer": ${ops.add(operads[0], operads[1])}}`);
+            res.write(`{"operation": "${operads[0]} + ${operads[1]}", "answer": ${ops.add(operads[0], operads[1])}}`)
             break;
         case '/sub':
-            res.write(`{"answer": ${ops.sub(operads[0], operads[1])}}`);
+            res.write(`{"operation": "${operads[0]} - ${operads[1]}", "answer": ${ops.sub(operads[0], operads[1])}}`)
             break;
         case '/mult':
-            res.write(`{"answer": ${ops.mult(operads[0], operads[1])}}`);
+            res.write(`{"operation": "${operads[0]} * ${operads[1]}", "answer": ${ops.mult(operads[0], operads[1])}}`)
             break;
         case '/modulo':
-            res.write(`{"answer": ${ops.modulo(operads[0], operads[1])}}`);
+            res.write(`{"operation": "${operads[0]} % ${operads[1]}", "answer": ${ops.modulo(operads[0], operads[1])}}`);
             break;
         default: // This should never trigger, but why not be careful?
             res.write(`{"error": "Operation ${endpoint} unknown. Try /add, /sub, /mult, or /modulo instead!}`);
